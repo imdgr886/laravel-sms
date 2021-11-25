@@ -1,0 +1,28 @@
+{
+    "name": "imdgr886/sms",
+    "description": "sms",
+    "type": "fastvel-module",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Imdgr886\\Sms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "imdgr886",
+            "email": "thrall.chen@gmail.com"
+        }
+    ],
+    "require": {
+        "overtrue/easy-sms": "^2.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Imdgr886\\Sms\\SmsServiceProvider"
+            ]
+        },
+        "installer-name": "Sms"
+    }
+}
