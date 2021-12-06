@@ -59,5 +59,9 @@ class SmsServiceProvider extends ServiceProvider
             }
             return $valid;
         }, '验证码错误');
+        Validator::extend('phone', function ($attribute, $value, $params, \Illuminate\Validation\Validator $validator) {
+            $pattern = '/^1[3-9]{1}\d{9}$/';
+            return preg_match($pattern, $value);
+        }, '验证码错误');
     }
 }
